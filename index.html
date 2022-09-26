@@ -4,24 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İzin Günü Hesapla</title>
+    <title>İzin Günü Hesaplama</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <label for="dogumYili">Doğum Yılı Giriniz:</label>
-    <input type="number" id="dogumYili">
-
-    <label for="baslananYil">İşe Başlanan Yılı Giriniz:</label>
-    <input type="number" id="baslananYil">
-
-    <label for="hesaplanacakYil">Hesaplanacak Yılı Giriniz:</label>
-    <input type="number" id="hesaplanacakYil">
-
+<body onload="sec()">
     <label for="emekli">Emekli</label>
-    <input type="radio" id="emekli" onclick="emekliHesapla()">
-    <input type="button" value="Hesapla" onclick="hesapla()">
+    <input type="radio" id="emekli">
+    <label for="emekliDegil">Emekli Değil</label>
+    <input type="radio" id="emekliDegil">
 
-    <h3 id="sonuc"></h3>
-    <script src="script.js"></script>
+    <span id="izin">
+        <div id="dogum">
+            <label for="numberDogumGunu">Doğum Gününüzü:</label>
+            <select id="numberDogumGunu">
+                <option value="0">Seçiniz</option>
+            </select>
+
+            <label for="numberDogumAyi">Doğum Ayınızı:</label>
+            <select id="numberDogumAyi">
+                <option value="0">Seçiniz</option>
+            </select>
+
+            <label for="numberDogumYili">Doğum Yılınızı:</label>
+            <select id="numberDogumYili">
+                <option value="0">Seçiniz</option>
+            </select>
+        </div>
+
+        <div id="baslama">
+            <label for="numberBaslamaGunu">Başlama Gününüzü:</label>
+            <select id="numberBaslamaGunu">
+                <option value="0">Seçiniz</option>
+            </select>
+
+            <label for="numberBaslamaAyi">Başlama Ayınızı:</label>
+            <select id="numberBaslamaAyi">
+                <option value="0">Seçiniz</option>
+            </select>
+
+            <label for="numberBaslamaYili">Başlama Yılınızı:</label>
+            <select id="numberBaslamaYili">
+                <option value="0">Seçiniz</option>
+            </select>
+        </div>
+
+        <div id="hesaplama">
+            <label for="numberHesaplanacakGun">Hesaplanacak Günü:</label>
+            <select id="numberHesaplanacakGun">
+                <option value="0">Seçiniz</option>
+            </select>
+
+            <label for="numberHesaplanacakAy">Hesaplanacak Ayı:</label>
+            <select id="numberHesaplanacakAy">
+                <option value="0">Seçiniz</option>
+            </select>
+
+            <label for="numberHesaplanacakYil">Hesaplanancak Yılı:</label>
+            <select id="numberHesaplanacakYil">
+                <option value="0">Seçiniz</option>
+            </select>
+        </div>
+        
+        <input type="submit" value="Hesapla" onclick="hesapla()">
+        <h3 id="sonuc"></h3>
+        <script src="script.js"></script>
+    </span>
 </body>
 </html>
